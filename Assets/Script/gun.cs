@@ -21,7 +21,7 @@ public class gun : MonoBehaviour
     void Start()
     {
         ammo = maxAmmo;
-        ammoCount.text = "Ammo: " + ammo;
+        //ammoCount.text = "Ammo: " + ammo;
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class gun : MonoBehaviour
     }
     public void Shoot()
     {
-        if(ammo>0)
+        if (ammo > 0)
         {
             //muzzleFlash.SetActive(true);
             //create bullet at fire point position and rotation
@@ -50,7 +50,7 @@ public class gun : MonoBehaviour
                     gunSound.Play();
                 }
             ammo--;
-            ammoCount.text = "Ammo" + ammo;
+            //ammoCount.text = "Ammo" + ammo;
             // Ray ray = Camera.main.ViewportPointToRay(
             //     new Vector3(0.5f, 0.5f, 0f) //50% width, 50% height; how to show Raycast: show the ray
             // );
@@ -84,7 +84,8 @@ public class gun : MonoBehaviour
             
             }
         }
-        else {
+        else
+        {
             //muzzleFlash.SetActive(false); //turn muzzleFlash off
             gunSound.Stop();
         }
