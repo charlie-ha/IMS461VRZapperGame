@@ -24,6 +24,10 @@ public class gunSpawner : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        SpawnGun();
+        Debug.Log("item");
+        if (other.CompareTag("blaster"))
+        {
+            SpawnGun();
+        }
     }
 }
