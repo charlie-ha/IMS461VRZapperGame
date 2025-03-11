@@ -10,7 +10,8 @@ public class gun : MonoBehaviour
     [SerializeField] private Transform gunHead;
     [SerializeField] private GameObject brokenTargetPrefab; // Prefab for broken target
 
-    [SerializeField] private AudioSource gunSound;
+    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private AudioClip[] gunSounds;
     [SerializeField] private Text ammoCount;
     public Transform firePoint;
 
@@ -22,6 +23,8 @@ public class gun : MonoBehaviour
     {
         ammo = maxAmmo;
         //ammoCount.text = "Ammo: " + ammo;
+        audioPlayer = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -45,9 +48,10 @@ public class gun : MonoBehaviour
             //     //add force to bullet
             //     rb.AddForce(firePoint.forward*bulletForce, ForceMode.Impulse);
             // }
-            if (!gunSound.isPlaying)
+            if (!audioPlayer.isPlaying)
                 {
-                    gunSound.Play();
+                    audioPlayer.clip = gunSounds[0];//shoot
+                    audioPlayer.Play();
                 }
             ammo--;
             //ammoCount.text = "Ammo" + ammo;
@@ -68,26 +72,39 @@ public class gun : MonoBehaviour
 
                 //Debug.Log("We've shot" + hitInfo.point);
                 GameObject hitObject = hitInfo.collider.gameObject;
-                if (hitObject.name == "intact_target" || hitObject.layer == LayerMask.NameToLayer("target"))
-                {
-                    // Spawn broken target at the same position and rotation
-                    GameObject brokenTarget = Instantiate(brokenTargetPrefab, hitObject.transform.position, hitObject.transform.rotation);
-                    Destroy(hitObject); // Remove the intact target
-                }
-                GameObject marker = Instantiate(hitMarker, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
-                // Instantiate returns the reference (memory add) of the cloned item
-                Destroy(marker,2.0f);
+                // if (hitObject.name == "intact_target" || hitObject.layer == LayerMask.NameToLayer("target"))
+                // {
+                //     // Spawn broken target at the same position and rotation
+                //     GameObject brokenTarget = Instantiate(brokenTargetPrefab, hitObject.transform.position, hitObject.transform.rotation);
+                //     Destroy(hitObject); // Remove the intact target
+                // }
+                // GameObject marker = Instantiate(hitMarker, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
+                // // Instantiate returns the reference (memory add) of the cloned item
+                // Destroy(marker,2.0f);
 
+                //replace broken targets
+                targetBreak targetBreak = hitObject.GetComponent<targetBreak>();
+                if(targetBreak != null){
+
+                
+                    targetBreak.Break();
+                }
                 // target C = hitInfo.transform.GetComponent<intact_target>(); 
                 // if(C != null)
                 //     C.Destroy();
             
             }
         }
+        if (ammo<=0) 
+        {
+            //dry fire
+            audioPlayer.clip = gunSounds[1];
+            audioPlayer.Play();
+        }
         else
         {
             //muzzleFlash.SetActive(false); //turn muzzleFlash off
-            gunSound.Stop();
+            audioPlayer.Stop();
         }
     }
 }
