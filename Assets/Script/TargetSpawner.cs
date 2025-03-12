@@ -7,7 +7,7 @@ public class TargetSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public int targetSpawnAmount = 5;
     [SerializeField] private GameObject targetPrefabs;
-    public float spawnTimer = 10;//every 10s, changeable
+    public float spawnTimer = 5;//every 10s, changeable
     private float resetTimer = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +23,7 @@ public class TargetSpawner : MonoBehaviour
             {
                 //canSpawn = true;
                 resetTimer = 0;
+                SpawnTargets();
             }
     }
 
