@@ -10,13 +10,19 @@ public class targetBreak : MonoBehaviour
     private void Awake()
     {
         intact_target.SetActive(true);
-        intact_target.SetActive(false);
+        broken_target.SetActive(false);
         bc = GetComponent<BoxCollider>();
+        Debug.Log("awake");
     }
     public void Break()
     {
         intact_target.SetActive(false);
-        intact_target.SetActive(true);
-        bc.enabled = false;
+        broken_target.SetActive(true);
+        if(bc != null)
+        {
+            bc.enabled = false;
+        }
+        
+        Debug.Log("broken");
     }
 }

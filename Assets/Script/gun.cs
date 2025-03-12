@@ -84,9 +84,8 @@ public class gun : MonoBehaviour
 
                 //replace broken targets
                 targetBreak targetBreak = hitObject.GetComponent<targetBreak>();
-                if(targetBreak != null){
-
-                
+                if(targetBreak != null)
+                {
                     targetBreak.Break();
                 }
                 // target C = hitInfo.transform.GetComponent<intact_target>(); 
@@ -98,13 +97,12 @@ public class gun : MonoBehaviour
         if (ammo<=0) 
         {
             //dry fire
-            audioPlayer.clip = gunSounds[1];
-            audioPlayer.Play();
+            if (!audioPlayer.isPlaying || audioPlayer.clip != gunSounds[1])
+            {
+                audioPlayer.clip = gunSounds[1]; // Dry fire sound
+                audioPlayer.Play();
+            }
         }
-        else
-        {
-            //muzzleFlash.SetActive(false); //turn muzzleFlash off
-            audioPlayer.Stop();
-        }
+        
     }
 }
