@@ -17,7 +17,8 @@ public class gun : MonoBehaviour
 
     private int ammo = 10;
     private int maxAmmo =20;
-    // public float bulletForce = 20f;
+    //public float bulletForce = 20f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,16 +39,16 @@ public class gun : MonoBehaviour
         {
             //muzzleFlash.SetActive(true);
             //create bullet at fire point position and rotation
-            // GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            //GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
             //get rigidbody component from the bullet to apply force
             //Rigidbody rb = bullet.GetComponent<Rigidbody>();
 
-            // if(rb != null)
-            // {
-            //     //add force to bullet
-            //     rb.AddForce(firePoint.forward*bulletForce, ForceMode.Impulse);
-            // }
+            //if (rb != null)
+            //{
+            //    //add force to bullet
+            //    rb.AddForce(firePoint.forward * bulletForce, ForceMode.Impulse);
+            //}
             if (!audioPlayer.isPlaying)
                 {
                     audioPlayer.clip = gunSounds[0];//shoot
