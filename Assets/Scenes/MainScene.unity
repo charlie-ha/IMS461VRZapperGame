@@ -126,6 +126,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1387330558167890234, guid: 23d22313fcb7dbf4f804c359f9d205da, type: 3}
+      propertyPath: InitialModule.startColor.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8367113791924210919, guid: 23d22313fcb7dbf4f804c359f9d205da, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.027
@@ -3425,16 +3429,16 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0a01c4eaa4feda54fb03229672d9bd5c, type: 3}
-  m_Resource: {fileID: 8300000, guid: 0a01c4eaa4feda54fb03229672d9bd5c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 13fc359b6e7d412499fbbd7efbc57ff9, type: 3}
+  m_Resource: {fileID: 8300000, guid: 13fc359b6e7d412499fbbd7efbc57ff9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.815
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 28
   DopplerLevel: 1
   MinDistance: 2.0150013
   MaxDistance: 226.49

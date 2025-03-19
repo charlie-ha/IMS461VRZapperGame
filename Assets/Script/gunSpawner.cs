@@ -69,6 +69,7 @@ public class GunSpawner : MonoBehaviour
     private float spawnTimer = 5f;
     private bool canSpawn = true;
     private Coroutine spawnCoroutine = null;
+    private GameObject currentGun = null; // Track the spawned gun
 
     void Start()
     {
@@ -77,7 +78,7 @@ public class GunSpawner : MonoBehaviour
 
     private void SpawnGun()
     {
-        if (canSpawn)
+        if (canSpawn && currentGun == null )
         {
             Instantiate(gunPrefab, gunSpawnPoint.position, gunSpawnPoint.rotation);
         }
@@ -85,8 +86,9 @@ public class GunSpawner : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("blaster"))
+        if (other.CompareTag("blaster") && other.gameObject == currentGun)
         {
+            currentGun = null; // Clear reference
             if (spawnCoroutine == null)
             {
                 spawnCoroutine = StartCoroutine(StartSpawnTimer());
@@ -99,7 +101,7 @@ public class GunSpawner : MonoBehaviour
         canSpawn = false;
         yield return new WaitForSeconds(spawnTimer);
         canSpawn = true;
-        SpawnGun();
         spawnCoroutine = null;
+        SpawnGun(); // Spawn a new gun after timer ends
     }
 }

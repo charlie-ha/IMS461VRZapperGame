@@ -55,7 +55,7 @@ public class gun : MonoBehaviour
             StartCoroutine(DisableLaserAfterDelay(0.1f)); // Start coroutine to turn it off after 0.1s
 
             muzzleFlash.Play(); // Show muzzle flash
-            StartCoroutine(DisableMuzzleFlashAfterDelay(0.05f)); // Hide muzzle flash after 0.05s
+            StartCoroutine(DisableMuzzleFlashAfterDelay(0.1f)); // Hide muzzle flash after 0.05s
 
             //muzzleFlash.SetActive(true);
             //create bullet at fire point position and rotation
