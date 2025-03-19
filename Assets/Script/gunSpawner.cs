@@ -9,6 +9,7 @@ public class gunSpawner : MonoBehaviour
     private int spawnTimer = 5;
     private float resetTimer = 0f;
     private bool canSpawn = true;
+    private Coroutine spawnCoroutine = null;//stop multiple coroutines from running
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,19 +18,19 @@ public class gunSpawner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (canSpawn == false)
-        {
-            resetTimer += 1 * Time.deltaTime;
-            if (resetTimer >= spawnTimer)
-            {
-                canSpawn = true;
-                resetTimer = 0;
-                SpawnGun();
-            }
-        }
-    }
+    //void Update()
+    //{
+    //    if (canSpawn == false)
+    //    {
+    //        resetTimer += 1 * Time.deltaTime;
+    //        if (resetTimer >= spawnTimer)
+    //        {
+    //            canSpawn = true;
+    //            resetTimer = 0;
+    //            SpawnGun();
+    //        }
+    //    }
+    //}
     public void SpawnGun()
     {
         if (canSpawn == true)
@@ -42,8 +43,19 @@ public class gunSpawner : MonoBehaviour
         //Debug.Log("item");
         if (other.CompareTag("blaster"))
         {
-            SpawnGun();
+            if (spawnCoroutine == null)
+            {
+                SpawnGun();
+            }
         }
+        
+    }
+    private IEnumerator StartSpawnTimer()
+    {
         canSpawn = false;
+        yield return new WaitForSeconds(spawnTimer);
+        canSpawn = true;
+        SpawnGun();
+        spawnCoroutine = null;
     }
 }
