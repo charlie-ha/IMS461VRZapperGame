@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+[RequireComponent(typeof(LineRenderer))]
 public class gun : MonoBehaviour
 {
     //public GameObject bulletPrefab;
@@ -14,6 +15,13 @@ public class gun : MonoBehaviour
     [SerializeField] private AudioClip[] gunSounds;
     [SerializeField] private Text ammoCount;
     public Transform firePoint;
+    public Camera playerCamera;
+
+    //laser gun
+    public float gunRange = 100f;
+    public float laserDuration = 0.5f;
+
+    LineRenderer laserLine;
 
     private int ammo = 10;
     private int maxAmmo =20;
@@ -25,7 +33,7 @@ public class gun : MonoBehaviour
         ammo = maxAmmo;
         //ammoCount.text = "Ammo: " + ammo;
         audioPlayer = GetComponent<AudioSource>();
-
+        laserLine = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
@@ -55,6 +63,9 @@ public class gun : MonoBehaviour
                     audioPlayer.Play();
                 }
             ammo--;
+            laserLine.SetPosition(0, firePoint.position);
+            Vector3 rayOrigin = playerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
+
             //ammoCount.text = "Ammo" + ammo;
             // Ray ray = Camera.main.ViewportPointToRay(
             //     new Vector3(0.5f, 0.5f, 0f) //50% width, 50% height; how to show Raycast: show the ray
@@ -72,6 +83,7 @@ public class gun : MonoBehaviour
                 //hitInfo.point position it is hit
 
                 //Debug.Log("We've shot" + hitInfo.point);
+                laserLine.SetPosition(1, hitInfo.point);
                 GameObject hitObject = hitInfo.collider.gameObject;
                 Debug.Log(hitObject.name);
                 // if (hitObject.name == "intact_target" || hitObject.layer == LayerMask.NameToLayer("target"))
