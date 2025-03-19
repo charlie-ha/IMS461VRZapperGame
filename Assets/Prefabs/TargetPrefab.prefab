@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intact_target: {fileID: 4770752139561666641}
-  broken_target: {fileID: 0}
+  broken_target: {fileID: 7143422901250931010}
 --- !u!4 &8286881238838838218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8761534250697189707, guid: 2d1c086da59a942f48a06fd2e020065a, type: 3}

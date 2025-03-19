@@ -15239,7 +15239,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 45153880973d776439378944a652fb58, type: 3}
   - {fileID: 8300000, guid: b5f6fee0c794e1e45802633ab5d71b90, type: 3}
   ammoCount: {fileID: 0}
-  laser: {fileID: 0}
+  laser: {fileID: 542470706944790363}
+  muzzleFlash: {fileID: 1387330558167890234}
 --- !u!82 &6585683963710755644
 AudioSource:
   m_ObjectHideFlags: 0

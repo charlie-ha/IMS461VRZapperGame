@@ -15,6 +15,7 @@ public class gun : MonoBehaviour
     [SerializeField] private AudioClip[] gunSounds;
     [SerializeField] private Text ammoCount;
     [SerializeField] private GameObject laser;
+    [SerializeField] private ParticleSystem muzzleFlash;
     //public Transform firePoint;
     //public Camera playerCamera;
 
@@ -37,6 +38,8 @@ public class gun : MonoBehaviour
         audioPlayer = GetComponent<AudioSource>();
         //laserLine = GetComponent<LineRenderer>();
         laser.SetActive(false);
+        muzzleFlash = GetComponentInChildren<ParticleSystem>();
+        //muzzleFlash.SetActive(false);
     }
 
     // Update is called once per frame
@@ -51,6 +54,9 @@ public class gun : MonoBehaviour
             laser.SetActive(true);
             StartCoroutine(DisableLaserAfterDelay(0.1f)); // Start coroutine to turn it off after 0.1s
 
+            muzzleFlash.Play(); // Show muzzle flash
+            StartCoroutine(DisableMuzzleFlashAfterDelay(0.05f)); // Hide muzzle flash after 0.05s
+
             //muzzleFlash.SetActive(true);
             //create bullet at fire point position and rotation
             //GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
@@ -63,6 +69,7 @@ public class gun : MonoBehaviour
             //    //add force to bullet
             //    rb.AddForce(firePoint.forward * bulletForce, ForceMode.Impulse);
             //}
+            audioPlayer.Stop();
             if (!audioPlayer.isPlaying)
                 {
                     audioPlayer.clip = gunSounds[0];//shoot
@@ -136,5 +143,10 @@ public class gun : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         laser.SetActive(false); // Turn off laser
+    }
+    private IEnumerator DisableMuzzleFlashAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        muzzleFlash.Stop();
     }
 }
