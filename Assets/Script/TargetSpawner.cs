@@ -6,7 +6,7 @@ public class TargetSpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public int targetSpawnAmount = 3;
-    [SerializeField] private GameObject targetPrefabs;
+    [SerializeField] private GameObject[] targetPrefabs;
     public float spawnTimer = 20;//every 10s, changeable
     private float resetTimer = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,7 +32,7 @@ public class TargetSpawner : MonoBehaviour
         for(int i = 0; i < targetSpawnAmount; i++)
         {
             int spawnRandom = Random.Range(0, spawnPoints.Length);//random positions near spawn points
-            Instantiate(targetPrefabs, new Vector3(spawnPoints[spawnRandom].position.x - Random.Range(0, 3), spawnPoints[spawnRandom].position.y, spawnPoints[spawnRandom].position.z - Random.Range(0, 5)), spawnPoints[i].rotation);//which points to spawn; positions; rotation
+            Instantiate(targetPrefabs[Random.Range(0,targetPrefabs.Length)], new Vector3(spawnPoints[spawnRandom].position.x - Random.Range(0, 3), spawnPoints[spawnRandom].position.y, spawnPoints[spawnRandom].position.z - Random.Range(0, 5)), spawnPoints[i].rotation);//which points to spawn; positions; rotation
         }
     }
 }
