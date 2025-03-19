@@ -45,7 +45,7 @@ public class gunSpawner : MonoBehaviour
         {
             if (spawnCoroutine == null)
             {
-                SpawnGun();
+                spawnCoroutine = StartCoroutine(StartSpawnTimer());
             }
         }
         
