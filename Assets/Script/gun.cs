@@ -14,17 +14,19 @@ public class gun : MonoBehaviour
     [SerializeField] private AudioSource audioPlayer;
     [SerializeField] private AudioClip[] gunSounds;
     [SerializeField] private Text ammoCount;
-    public Transform firePoint;
-    public Camera playerCamera;
+    [SerializeField] private GameObject laser;
+    //public Transform firePoint;
+    //public Camera playerCamera;
 
     //laser gun
-    public float gunRange = 100f;
-    public float laserDuration = 0.5f;
+    //public float gunRange = 100f;
+    //public float laserDuration = 0.5f;
 
-    LineRenderer laserLine;
+    //LineRenderer laserLine;
 
     private int ammo = 10;
     private int maxAmmo =20;
+    
     //public float bulletForce = 20f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,7 +35,8 @@ public class gun : MonoBehaviour
         ammo = maxAmmo;
         //ammoCount.text = "Ammo: " + ammo;
         audioPlayer = GetComponent<AudioSource>();
-        laserLine = GetComponent<LineRenderer>();
+        //laserLine = GetComponent<LineRenderer>();
+        laser.SetActive(false);
     }
 
     // Update is called once per frame
@@ -45,6 +48,9 @@ public class gun : MonoBehaviour
     {
         if (ammo > 0)
         {
+            laser.SetActive(true);
+            StartCoroutine(DisableLaserAfterDelay(0.1f)); // Start coroutine to turn it off after 0.1s
+
             //muzzleFlash.SetActive(true);
             //create bullet at fire point position and rotation
             //GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
@@ -64,8 +70,8 @@ public class gun : MonoBehaviour
                     audioPlayer.Play();
                 }
             ammo--;
-            laserLine.SetPosition(0, firePoint.position);
-            Vector3 rayOrigin = playerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
+            //laserLine.SetPosition(0, firePoint.position);
+            //Vector3 rayOrigin = playerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
 
             //ammoCount.text = "Ammo" + ammo;
             // Ray ray = Camera.main.ViewportPointToRay(
@@ -84,7 +90,7 @@ public class gun : MonoBehaviour
                 //hitInfo.point position it is hit
 
                 //Debug.Log("We've shot" + hitInfo.point);
-                laserLine.SetPosition(1, hitInfo.point);
+                //laserLine.SetPosition(1, hitInfo.point);
                 GameObject hitObject = hitInfo.collider.gameObject;
                 Debug.Log(hitObject.name);
                 // if (hitObject.name == "intact_target" || hitObject.layer == LayerMask.NameToLayer("target"))
@@ -108,10 +114,10 @@ public class gun : MonoBehaviour
                 //     C.Destroy();
             
             }
-            else
-            {
-                laserLine.SetPosition(1, rayOrigin + (playerCamera.transform.forward * gunRange));
-            }
+            //else
+            //{
+            //    laserLine.SetPosition(1, rayOrigin + (playerCamera.transform.forward * gunRange));
+            //}
         }
         if (ammo<=0) 
         {
@@ -123,6 +129,12 @@ public class gun : MonoBehaviour
                 audioPlayer.Play();
             }
         }
+
         
+    }
+    private IEnumerator DisableLaserAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        laser.SetActive(false); // Turn off laser
     }
 }
