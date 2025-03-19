@@ -60,6 +60,7 @@ public class gun : MonoBehaviour
             if (!audioPlayer.isPlaying)
                 {
                     audioPlayer.clip = gunSounds[0];//shoot
+                    audioPlayer.pitch = Random.Range(0.8f, 1.2f);
                     audioPlayer.Play();
                 }
             ammo--;
@@ -107,6 +108,10 @@ public class gun : MonoBehaviour
                 //     C.Destroy();
             
             }
+            else
+            {
+                laserLine.SetPosition(1, rayOrigin + (playerCamera.transform.forward * gunRange));
+            }
         }
         if (ammo<=0) 
         {
@@ -114,6 +119,7 @@ public class gun : MonoBehaviour
             if (!audioPlayer.isPlaying || audioPlayer.clip != gunSounds[1])
             {
                 audioPlayer.clip = gunSounds[1]; // Dry fire sound
+                audioPlayer.pitch = Random.Range(0.8f, 1.2f);
                 audioPlayer.Play();
             }
         }
