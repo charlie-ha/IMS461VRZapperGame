@@ -69,7 +69,7 @@ public class GunSpawner : MonoBehaviour
     private float spawnTimer = 5f;
     private bool canSpawn = true;
     private Coroutine spawnCoroutine = null;
-    private GameObject currentGun = null; // Track the spawned gun
+    //private GameObject currentGun = null; // Track the spawned gun
 
     void Start()
     {
@@ -78,17 +78,23 @@ public class GunSpawner : MonoBehaviour
 
     private void SpawnGun()
     {
-        if (canSpawn && currentGun == null )
+        if (canSpawn)
         {
-            Instantiate(gunPrefab, gunSpawnPoint.position, gunSpawnPoint.rotation);
+            //float randomZ = Random.Range(0, 4);
+            //float randomY = Random.Range(0, 4);
+
+            //// Set the gun's position with the random Y value
+            //Vector3 spawnPosition = new Vector3(gunSpawnPoint.position.x, randomY, gunSpawnPoint.position.z);
+
+            Instantiate(gunPrefab, gunSpawnPoint.position, gunSpawnPoint.rotation);//gunSpawnPoint.position
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("blaster") && other.gameObject == currentGun)
+        if (other.CompareTag("blaster"))
         {
-            currentGun = null; // Clear reference
+            //currentGun = null; // Clear reference
             if (spawnCoroutine == null)
             {
                 spawnCoroutine = StartCoroutine(StartSpawnTimer());
@@ -101,7 +107,8 @@ public class GunSpawner : MonoBehaviour
         canSpawn = false;
         yield return new WaitForSeconds(spawnTimer);
         canSpawn = true;
-        spawnCoroutine = null;
+        
         SpawnGun(); // Spawn a new gun after timer ends
+        spawnCoroutine = null;
     }
 }
