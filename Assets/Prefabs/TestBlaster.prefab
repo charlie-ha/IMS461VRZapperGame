@@ -173,7 +173,7 @@ Transform:
   m_GameObject: {fileID: 6688440689781717375}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.0547, y: -0.0341, z: -0}
+  m_LocalPosition: {x: 0.0146, y: -0.1149, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5342,7 +5342,7 @@ MonoBehaviour:
   brokenTargetPrefab: {fileID: 4852065516629851892, guid: 0cc4ac69958db466583a66d8d026c041, type: 3}
   audioPlayer: {fileID: 6585683963710755644}
   gunSounds:
-  - {fileID: 8300000, guid: aaef5231b452ca64a8642aeff708e1cf, type: 3}
+  - {fileID: 8300000, guid: 424a2402a94b02046ad68d2b2f75a374, type: 3}
   - {fileID: 8300000, guid: b5f6fee0c794e1e45802633ab5d71b90, type: 3}
   ammoCount: {fileID: 0}
   firePoint: {fileID: 2636175676509445189}
@@ -5356,8 +5356,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aaef5231b452ca64a8642aeff708e1cf, type: 3}
-  m_Resource: {fileID: 8300000, guid: aaef5231b452ca64a8642aeff708e1cf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 424a2402a94b02046ad68d2b2f75a374, type: 3}
+  m_Resource: {fileID: 8300000, guid: 424a2402a94b02046ad68d2b2f75a374, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.606
   m_Pitch: 1
