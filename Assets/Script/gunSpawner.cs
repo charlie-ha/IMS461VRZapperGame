@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -50,6 +50,50 @@ public class gunSpawner : MonoBehaviour
         }
         
     }
+    private IEnumerator StartSpawnTimer()
+    {
+        canSpawn = false;
+        yield return new WaitForSeconds(spawnTimer);
+        canSpawn = true;
+        SpawnGun();
+        spawnCoroutine = null;
+    }
+}*/
+using System.Collections;
+using UnityEngine;
+
+public class GunSpawner : MonoBehaviour
+{
+    [SerializeField] private GameObject gunPrefab;
+    [SerializeField] private Transform gunSpawnPoint;
+    private float spawnTimer = 5f;
+    private bool canSpawn = true;
+    private Coroutine spawnCoroutine = null;
+
+    void Start()
+    {
+        SpawnGun(); // Spawn the gun at start
+    }
+
+    private void SpawnGun()
+    {
+        if (canSpawn)
+        {
+            Instantiate(gunPrefab, gunSpawnPoint.position, gunSpawnPoint.rotation);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("blaster"))
+        {
+            if (spawnCoroutine == null)
+            {
+                spawnCoroutine = StartCoroutine(StartSpawnTimer());
+            }
+        }
+    }
+
     private IEnumerator StartSpawnTimer()
     {
         canSpawn = false;
