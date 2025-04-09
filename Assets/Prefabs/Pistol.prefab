@@ -10115,7 +10115,7 @@ GameObject:
   - component: {fileID: 1759756062503493940}
   - component: {fileID: 6585683963710755644}
   m_Layer: 0
-  m_Name: TestBlaster
+  m_Name: Pistol
   m_TagString: blaster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
