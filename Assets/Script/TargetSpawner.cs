@@ -32,7 +32,7 @@ public class TargetSpawner : MonoBehaviour
         for(int i = 0; i < targetSpawnAmount; i++)
         {
             int spawnRandom = Random.Range(0, spawnPoints.Length);//random positions near spawn points
-            Instantiate(targetPrefabs[Random.Range(0,targetPrefabs.Length)], new Vector3(spawnPoints[spawnRandom].position.x - Random.Range(0, 3), spawnPoints[spawnRandom].position.y, spawnPoints[spawnRandom].position.z - Random.Range(0, 5)), spawnPoints[i].rotation);//which points to spawn; positions; rotation
+            Instantiate(targetPrefabs[Random.Range(0,targetPrefabs.Length)], new Vector3(spawnPoints[spawnRandom].position.x - Random.Range(-1, 2), spawnPoints[spawnRandom].position.y, spawnPoints[spawnRandom].position.z - Random.Range(-1, 2)), spawnPoints[i].rotation);//which points to spawn; positions; rotation
         }
     }
 }
