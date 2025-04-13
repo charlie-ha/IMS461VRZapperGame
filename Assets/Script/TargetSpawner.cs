@@ -9,6 +9,8 @@ public class TargetSpawner : MonoBehaviour
     [SerializeField] private GameObject[] targetPrefabs;
     public float spawnTimer = 20;//every 10s, changeable
     private float resetTimer = 0;
+    public static GameObject[] targets;
+    public int targetsInGameAmount = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +27,20 @@ public class TargetSpawner : MonoBehaviour
                 resetTimer = 0;
                 SpawnTargets();
             }
+
+        if(targetsInGameAmount > 30)//destroy 10 targets when number exceeds 30
+        {
+            targets = GameObject.FindGameObjectsWithTag("target");
+            for(int i = 0; i < 10; i++)
+            {
+                Destroy(targets[i]);
+                targetsInGameAmount--;
+            }
+        }
+        // if(targetsInGameAmount < 0)
+        // {
+        //     targetsInGameAmount = 0;
+        // }
     }
 
     void SpawnTargets()
@@ -32,7 +48,8 @@ public class TargetSpawner : MonoBehaviour
         for(int i = 0; i < targetSpawnAmount; i++)
         {
             int spawnRandom = Random.Range(0, spawnPoints.Length);//random positions near spawn points
-            Instantiate(targetPrefabs[Random.Range(0,targetPrefabs.Length)], new Vector3(spawnPoints[spawnRandom].position.x - Random.Range(-1, 2), spawnPoints[spawnRandom].position.y, spawnPoints[spawnRandom].position.z - Random.Range(-1, 2)), spawnPoints[i].rotation);//which points to spawn; positions; rotation
+            Instantiate(targetPrefabs[Random.Range(0,targetPrefabs.Length)], new Vector3(spawnPoints[spawnRandom].position.x - Random.Range(-3, 3), spawnPoints[spawnRandom].position.y - Random.Range(-3, 3), spawnPoints[spawnRandom].position.z - Random.Range(-3, 3)), spawnPoints[i].rotation);//which points to spawn; positions; rotation
+            targetsInGameAmount ++;
         }
     }
 }
