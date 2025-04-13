@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TargetSpawner : MonoBehaviour
 {
+    public bool activateSpawner = false;
     public Transform[] spawnPoints;
     public int targetSpawnAmount = 3;
     [SerializeField] private GameObject[] targetPrefabs;
@@ -20,30 +21,33 @@ public class TargetSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        resetTimer += 1 * Time.deltaTime;
-            if(resetTimer >= spawnTimer)
-            {
-                //canSpawn = true;
-                resetTimer = 0;
-                SpawnTargets();
-            }
-
-        if(targetsInGameAmount > 30)//destroy 10 targets when number exceeds 30
+        if(activateSpawner == true)
         {
-            targets = GameObject.FindGameObjectsWithTag("target");
-            for(int i = 0; i < 10; i++)
+            resetTimer += 1 * Time.deltaTime;
+                if(resetTimer >= spawnTimer)
+                {
+                    //canSpawn = true;
+                    resetTimer = 0;
+                    SpawnTargets();
+                }
+
+            if(targetsInGameAmount > 30)//destroy 10 targets when number exceeds 30
             {
-                Destroy(targets[i]);
-                targetsInGameAmount--;
+                targets = GameObject.FindGameObjectsWithTag("target");
+                for(int i = 0; i < 10; i++)
+                {
+                    Destroy(targets[i]);
+                    targetsInGameAmount--;
+                }
             }
+            // if(targetsInGameAmount < 0)
+            // {
+            //     targetsInGameAmount = 0;
+            // }
         }
-        // if(targetsInGameAmount < 0)
-        // {
-        //     targetsInGameAmount = 0;
-        // }
     }
 
-    void SpawnTargets()
+    public void SpawnTargets()
     {
         for(int i = 0; i < targetSpawnAmount; i++)
         {
