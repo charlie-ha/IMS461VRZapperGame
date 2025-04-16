@@ -256,8 +256,8 @@ Transform:
   m_GameObject: {fileID: 5477907413693079686}
   serializedVersion: 2
   m_LocalRotation: {x: 0.06162845, y: 0.70441604, z: 0.70441604, w: -0.06162845}
-  m_LocalPosition: {x: -0.008, y: -4.906, z: 0.001}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 9.323542}
+  m_LocalPosition: {x: -0.01, y: -25.45, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1246558032433750043}
@@ -347,9 +347,9 @@ GameObject:
   - component: {fileID: 1246558032433750043}
   - component: {fileID: 2830761720656535400}
   - component: {fileID: 573737489385075881}
-  - component: {fileID: 1234512869180336506}
   - component: {fileID: 6628991309322134995}
   - component: {fileID: 7895060939346148037}
+  - component: {fileID: 8428876624378573403}
   m_Layer: 0
   m_Name: Rifle
   m_TagString: blaster
@@ -485,7 +485,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1234512869180336506}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: gun, Assembly-CSharp
         m_MethodName: Shoot
         m_Mode: 1
@@ -562,28 +562,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &1234512869180336506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6340910536501789868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 934df8f01d5db4b8ba8208149a699dec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitMarker: {fileID: 0}
-  gunHead: {fileID: 6834143947977207087}
-  brokenTargetPrefab: {fileID: 4852065516629851892, guid: 0cc4ac69958db466583a66d8d026c041, type: 3}
-  audioPlayer: {fileID: 6628991309322134995}
-  gunSounds:
-  - {fileID: 8300000, guid: 45153880973d776439378944a652fb58, type: 3}
-  - {fileID: 8300000, guid: b5f6fee0c794e1e45802633ab5d71b90, type: 3}
-  ammoCount: {fileID: 0}
-  laser: {fileID: 5477907413693079686}
-  muzzleFlash: {fileID: 6263861335012406354}
 --- !u!82 &6628991309322134995
 AudioSource:
   m_ObjectHideFlags: 0
@@ -695,6 +673,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MultiSelectPosition: 0
   m_MultiSelectRotation: 0
+--- !u!114 &8428876624378573403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6340910536501789868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eccbb74699d8fb4bad91772f3bbb5f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMarker: {fileID: 0}
+  gunHead: {fileID: 6834143947977207087}
+  brokenTargetPrefab: {fileID: 4852065516629851892, guid: 0cc4ac69958db466583a66d8d026c041, type: 3}
+  audioPlayer: {fileID: 6628991309322134995}
+  gunSounds:
+  - {fileID: 8300000, guid: 03bf498f04634f44f98d60ddc62d91cf, type: 3}
+  - {fileID: 8300000, guid: b5f6fee0c794e1e45802633ab5d71b90, type: 3}
+  ammoCount: {fileID: 0}
+  laser: {fileID: 5477907413693079686}
+  muzzleFlash: {fileID: 6263861335012406354}
 --- !u!1 &6941705306917565832
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +722,7 @@ Transform:
   m_GameObject: {fileID: 6941705306917565832}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0109, y: -0.25, z: 0}
+  m_LocalPosition: {x: -0.0109, y: -0.5193, z: 0.000000044936314}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5643,7 +5643,7 @@ Transform:
   m_GameObject: {fileID: 7626547662789613098}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5416752, y: -0.45451948, z: 0.45451948, w: 0.5416752}
-  m_LocalPosition: {x: -0.010800003, y: -0.286, z: -0.003100045}
+  m_LocalPosition: {x: -0.010800003, y: -0.5553, z: -0.0031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
