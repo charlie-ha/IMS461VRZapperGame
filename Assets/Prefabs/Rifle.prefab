@@ -485,9 +485,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: gun, Assembly-CSharp
-        m_MethodName: Shoot
+      - m_Target: {fileID: 11500000, guid: 3eccbb74699d8fb4bad91772f3bbb5f0, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
