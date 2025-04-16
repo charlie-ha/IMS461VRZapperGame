@@ -6,7 +6,7 @@ public class GunSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject gunPrefab;
     [SerializeField] private Transform gunSpawnPoint;
-    private float spawnTimer = 5f;
+    private float spawnTimer = 15f;
     private bool canSpawn = true;
     private Coroutine spawnCoroutine = null;
     //private GameObject currentGun = null; // Track the spawned gun
