@@ -107,10 +107,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031357307
+  m_Radius: 0.03987125
   m_Height: 0.14014956
   m_Direction: 1
-  m_Center: {x: 0.018936764, y: -0.13640459, z: -0.0036831833}
+  m_Center: {x: 0.018936764, y: -0.13640459, z: -0.0013941005}
 --- !u!65 &578718201051962340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -128,10 +128,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.059999995, y: 0.18865113, z: 0.06}
-  m_Center: {x: -0.050000016, y: -0.12313393, z: 0.000000024214387}
+  m_Size: {x: 0.066423826, y: 0.18865113, z: 0.081815384}
+  m_Center: {x: -0.05321193, y: -0.12313393, z: -0.00007084757}
 --- !u!1 &3873864725260131583
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,13 +264,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4773337759387100580}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: -1}
-  m_LocalPosition: {x: 0.0146, y: -0.304, z: -0}
+  m_LocalRotation: {x: -0.49636996, y: 0.49636996, z: -0.50360394, w: -0.50360394}
+  m_LocalPosition: {x: 0.014600042, y: -0.30400136, z: -0.00003644824}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1246558032433750043}
-  m_LocalEulerAnglesHint: {x: -180, y: 180, z: 180}
+  m_LocalEulerAnglesHint: {x: -270.829, y: 0, z: 90}
 --- !u!1 &4870856155939003265
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +539,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &573737489385075881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
-  m_TrackScale: 1
+  m_TrackScale: 0
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
@@ -5920,7 +5920,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.059999995, y: 0.18865113, z: 0.06}
   m_Center: {x: -0.050000016, y: -0.12313393, z: 0.000000024214387}
