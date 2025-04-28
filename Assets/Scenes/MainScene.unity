@@ -6516,6 +6516,14 @@ PrefabInstance:
       propertyPath: audioPlayer
       value: 
       objectReference: {fileID: 2096439621}
+    - target: {fileID: 5090217590531217703, guid: 31c229bc0f056bb4eacfccea0bb50f1d, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 10bde48ef542d6a4fbee12145283824a, type: 2}
+    - target: {fileID: 7184923567044328462, guid: 31c229bc0f056bb4eacfccea0bb50f1d, type: 3}
+      propertyPath: m_PermittedDisplacementAxes
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8460633756620444611, guid: 31c229bc0f056bb4eacfccea0bb50f1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00050000474
