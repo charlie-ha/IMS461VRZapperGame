@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class gun1 : MonoBehaviour
 {
+    //automatic rifle
     //public GameObject bulletPrefab;
     //[SerializeField] private GameObject muzzleFlash;
     [SerializeField] private GameObject hitMarker;
@@ -16,6 +17,7 @@ public class gun1 : MonoBehaviour
     [SerializeField] private Text ammoCount;
     [SerializeField] private GameObject laser;
     [SerializeField] private ParticleSystem muzzleFlash;
+    
     //public Transform firePoint;
     //public Camera playerCamera;
 
@@ -27,7 +29,8 @@ public class gun1 : MonoBehaviour
 
     private int ammo = 20;
     private int maxAmmo = 40;
-    
+    private bool isShooting = false;
+
     //public float bulletForce = 20f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,6 +49,10 @@ public class gun1 : MonoBehaviour
     void Update()
     {
         
+    }
+    public void activateGun()
+    {
+        isShooting = true;
     }
     public void Shoot()
     {
