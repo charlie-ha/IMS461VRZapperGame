@@ -13,7 +13,7 @@ public class NewGunSpawn : MonoBehaviour
     public UnityEvent onReleaseGun;
     GameObject gun;
 
-    bool isGrabbed;
+    public bool isGrabbed;
 
 
 
@@ -24,7 +24,7 @@ public class NewGunSpawn : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (!isGrabbed && other.tag == "Hands")
+        if (!isGrabbed && other.tag == "blaster")
         {
             
             gun = other.gameObject;
@@ -38,7 +38,7 @@ public class NewGunSpawn : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == gun && other.tag == "Hands")
+        if (other.gameObject == gun && other.tag == "blaster")
         {
           
             onReleaseGun.Invoke();

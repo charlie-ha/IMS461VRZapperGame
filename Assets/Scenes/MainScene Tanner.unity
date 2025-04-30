@@ -3939,6 +3939,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isGrabbed: 0
 --- !u!1 &1333330366
 GameObject:
   m_ObjectHideFlags: 0
@@ -4277,6 +4278,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isGrabbed: 0
 --- !u!1 &1540077379
 GameObject:
   m_ObjectHideFlags: 0
@@ -5618,6 +5620,7 @@ MonoBehaviour:
   onReleaseGun:
     m_PersistentCalls:
       m_Calls: []
+  isGrabbed: 0
 --- !u!1001 &2031502736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6302,14 +6305,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestBlaster_tanner
       objectReference: {fileID: 0}
-    - target: {fileID: 2350514482016872097, guid: 4bd2fed7422fa434d94e3cf92cc436f6, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 586082254}
-    - target: {fileID: 2350514482016872097, guid: 4bd2fed7422fa434d94e3cf92cc436f6, type: 3}
-      propertyPath: gunSpawnPoint
-      value: 
-      objectReference: {fileID: 2015446355}
     - target: {fileID: 2573840475970384131, guid: 4bd2fed7422fa434d94e3cf92cc436f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.0489457
