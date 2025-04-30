@@ -17,7 +17,7 @@ public class gun1 : MonoBehaviour
     [SerializeField] private Text ammoCount;
     [SerializeField] private GameObject laser;
     [SerializeField] private ParticleSystem muzzleFlash;
-    
+
     //public Transform firePoint;
     //public Camera playerCamera;
 
@@ -30,6 +30,8 @@ public class gun1 : MonoBehaviour
     private int ammo = 20;
     private int maxAmmo = 40;
     private bool isShooting = false;
+    private Coroutine shootingCoroutine;
+    public float fireRate = 0.1f; // Time between shots
 
     //public float bulletForce = 20f;
 
@@ -48,12 +50,17 @@ public class gun1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void activateGun()
     {
         isShooting = true;
     }
+    public void deactivateGun()
+    {
+        isShooting = false;
+    }
+
     public void Shoot()
     {
         if (ammo > 0)
@@ -155,5 +162,14 @@ public class gun1 : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         muzzleFlash.Stop();
+    }
+    private IEnumerator ShootingRoutine()
+    {
+        isShooting = true;
+        while (isShooting)
+        {
+            Shoot();
+            yield return new WaitForSeconds(fireRate);
+        }
     }
 }
