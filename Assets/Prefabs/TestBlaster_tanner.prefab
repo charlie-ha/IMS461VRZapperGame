@@ -10570,10 +10570,9 @@ GameObject:
   - component: {fileID: 2553630847827718332}
   - component: {fileID: 5600190948869466626}
   - component: {fileID: 1505478350621413221}
-  - component: {fileID: 2350514482016872097}
   m_Layer: 0
   m_Name: gunPickUpDetect
-  m_TagString: blaster
+  m_TagString: Hands
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10667,36 +10666,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2350514482016872097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9079121232262122217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7511902a77d2ea4d99b2fb8a903ed7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gunPrefab: {fileID: 1870257827941142398}
-  gunSpawnPoint: {fileID: 0}
-  player: {fileID: 0}
-  onPressGun:
-    m_PersistentCalls:
-      m_Calls: []
-  onReleaseGun:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2350514482016872097}
-        m_TargetAssemblyTypeName: NewGunSpawn, Assembly-CSharp
-        m_MethodName: SpawnNewGun
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2

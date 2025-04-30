@@ -13,7 +13,7 @@ public class NewGunSpawn : MonoBehaviour
     public UnityEvent onReleaseGun;
     GameObject gun;
 
-    bool isGrabbed;
+    public bool isGrabbed;
 
 
 
@@ -31,7 +31,7 @@ public class NewGunSpawn : MonoBehaviour
             onPressGun.Invoke();
 
             isGrabbed = true;
-            Debug.Log(gun);
+            Debug.Log(other.transform.name);
         }
     }
 
@@ -43,7 +43,7 @@ public class NewGunSpawn : MonoBehaviour
           
             onReleaseGun.Invoke();
             isGrabbed = false;
-            
+            StartCoroutine(DestroyGun(other.gameObject));
         }
     }
 
@@ -51,6 +51,13 @@ public class NewGunSpawn : MonoBehaviour
     {
         Instantiate(gunPrefab, gunSpawnPoint.position, gunSpawnPoint.rotation);
     }
-
+    private IEnumerator DestroyGun(GameObject gun)
+    {
+        yield return new WaitForSeconds(5f);
+        if(gun && isGrabbed == false)
+        {
+            Destroy(gun);
+        }
+    }
 }
     
