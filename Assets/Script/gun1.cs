@@ -74,6 +74,7 @@ public class gun1 : MonoBehaviour
         {
             StopCoroutine(shootingCoroutine);
             shootingCoroutine = null;
+            isShooting = false;
         }
     }
 
