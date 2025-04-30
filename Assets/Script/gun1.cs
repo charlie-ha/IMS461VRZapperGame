@@ -83,7 +83,7 @@ public class gun1 : MonoBehaviour
         if (ammo > 0)
         {
             laser.SetActive(true);
-            StartCoroutine(DisableLaserAfterDelay(0.1f)); // Start coroutine to turn it off after 0.1s
+            StartCoroutine(DisableLaserAfterDelay(0.05f)); // Start coroutine to turn it off after 0.1s
 
             muzzleFlash.Play(); // Show muzzle flash
             StartCoroutine(DisableMuzzleFlashAfterDelay(0.1f)); // Hide muzzle flash after 0.05s
