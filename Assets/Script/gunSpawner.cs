@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject gunPrefab;
-    [SerializeField] private Transform gunSpawnPoint;
+    [SerializeField] private Transform[] gunSpawnPoints;
     private float spawnTimer = 5f;
     private bool canSpawn = true;
     private Coroutine spawnCoroutine = null;
@@ -26,7 +26,8 @@ public class GunSpawner : MonoBehaviour
             //// Set the gun's position with the random Y value
             //Vector3 spawnPosition = new Vector3(gunSpawnPoint.position.x, randomY, gunSpawnPoint.position.z);
 
-            Instantiate(gunPrefab, gunSpawnPoint.position, gunSpawnPoint.rotation);//gunSpawnPoint.position
+            Instantiate(gunPrefab, gunSpawnPoints[0].position, gunSpawnPoints[0].rotation);//gunSpawnPoint.position
+            Instantiate(gunPrefab, gunSpawnPoints[1].position, gunSpawnPoints[1].rotation);//gunSpawnPoint.position
         }
     }
 
