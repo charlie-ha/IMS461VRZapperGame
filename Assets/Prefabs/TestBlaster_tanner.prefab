@@ -10572,7 +10572,7 @@ GameObject:
   - component: {fileID: 1505478350621413221}
   m_Layer: 0
   m_Name: gunPickUpDetect
-  m_TagString: blaster
+  m_TagString: Hands
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
