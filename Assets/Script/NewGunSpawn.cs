@@ -24,20 +24,21 @@ public class NewGunSpawn : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (!isGrabbed)
+        if (!isGrabbed && other.tag == "Hands")
         {
             
             gun = other.gameObject;
             onPressGun.Invoke();
 
             isGrabbed = true;
+            Debug.Log(gun);
         }
     }
 
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == gun)
+        if (other.gameObject == gun && other.tag == "Hands")
         {
           
             onReleaseGun.Invoke();
