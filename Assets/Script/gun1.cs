@@ -52,13 +52,29 @@ public class gun1 : MonoBehaviour
     {
 
     }
+    //public void activateGun()
+    //{
+    //    isShooting = true;
+    //}
+    //public void deactivateGun()
+    //{
+    //    isShooting = false;
+    //}
     public void activateGun()
     {
-        isShooting = true;
+        if (shootingCoroutine == null)
+        {
+            shootingCoroutine = StartCoroutine(ShootingRoutine());
+        }
     }
+
     public void deactivateGun()
     {
-        isShooting = false;
+        if (shootingCoroutine != null)
+        {
+            StopCoroutine(shootingCoroutine);
+            shootingCoroutine = null;
+        }
     }
 
     public void Shoot()
