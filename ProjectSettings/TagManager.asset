@@ -10,6 +10,8 @@ TagManager:
   - Hands
   - redTarget
   - blueTarget
+  - movingRedTarget
+  - movingBlueTarget
   layers:
   - Default
   - TransparentFX
