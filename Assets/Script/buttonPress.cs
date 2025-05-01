@@ -8,6 +8,7 @@ public class buttonPress : MonoBehaviour
 {
     [SerializeField] private TargetSpawner targetSpawner;
     [SerializeField] private Text targetStatus;
+    [SerializeField] private timer timerobj;
     private bool buttonPressed = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void PressButton()
@@ -15,6 +16,7 @@ public class buttonPress : MonoBehaviour
         if(buttonPressed == false)
         {
             targetSpawner.activateSpawner=true;//activate spawner
+            timerobj.timerIsOn = true;
             buttonPressed = true;
             targetStatus.text = "Target Spawning - True";
         }
