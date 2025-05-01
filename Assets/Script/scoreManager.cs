@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class scoreManager : MonoBehaviour
 {
     public int score = 0;
-    [SerializeField] private Text scoreText; // Drag your score UI TextMeshPro object here
+    [SerializeField] private TMP_Text scoreText; // Drag your score UI TextMeshPro object here
 
     public void AddScore(string targetTag)
     {
@@ -28,7 +28,7 @@ public class scoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score.ToString();
+            scoreText.text =   score.ToString();
         }
     }
 }

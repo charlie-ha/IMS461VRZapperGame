@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class targetBreak : MonoBehaviour
 {
@@ -26,7 +27,11 @@ public class targetBreak : MonoBehaviour
         {
             bc.enabled = false;
         }
-        
+        scoreManager scoreManager = GameObject.FindFirstObjectByType<scoreManager>();
+        if (scoreManager != null)
+        {
+            scoreManager.AddScore(this.tag);
+        }
         //Debug.Log("broken");
     }
 }
