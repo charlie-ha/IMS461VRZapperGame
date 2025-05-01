@@ -8,17 +8,23 @@ using UnityEngine.UI;
 public class scoreManager : MonoBehaviour
 {
     public int score = 0;
+    public int redTargetBroken = 0;
+    public int blueTargetBroken = 0;
     [SerializeField] private TMP_Text scoreText; // Drag your score UI TextMeshPro object here
+    [SerializeField] private TMP_Text redTargetText; // Drag your score UI TextMeshPro object here
+    [SerializeField] private TMP_Text blueTargetText; // Drag your score UI TextMeshPro object here
 
     public void AddScore(string targetTag)
     {
         if (targetTag == "redTarget")
         {
             score += 5;
+            redTargetBroken += 1;
         }
         else if (targetTag == "blueTarget")
         {
             score += 10;
+            blueTargetBroken += 1;
         }
 
         UpdateScoreText();
@@ -29,6 +35,7 @@ public class scoreManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text =   score.ToString();
+            redTargetText.text = redTargetBroken.ToString();
         }
     }
 }
