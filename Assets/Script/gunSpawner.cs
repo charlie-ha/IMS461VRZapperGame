@@ -27,7 +27,7 @@ public class GunSpawner : MonoBehaviour
             //Vector3 spawnPosition = new Vector3(gunSpawnPoint.position.x, randomY, gunSpawnPoint.position.z);
 
             Instantiate(gunPrefab, gunSpawnPoints[0].position, gunSpawnPoints[0].rotation);//gunSpawnPoint.position
-            Instantiate(gunPrefab, gunSpawnPoints[1].position, gunSpawnPoints[1].rotation);//gunSpawnPoint.position
+            //Instantiate(gunPrefab, gunSpawnPoints[1].position, gunSpawnPoints[1].rotation);//gunSpawnPoint.position
         }
     }
 
