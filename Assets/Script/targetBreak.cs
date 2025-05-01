@@ -8,6 +8,7 @@ public class targetBreak : MonoBehaviour
     [SerializeField] private GameObject broken_target;
     BoxCollider bc;
     private TargetSpawner targetSpawner;
+
     private void Awake()
     {
         targetSpawner = GameObject.Find("Spawner").GetComponent<TargetSpawner>();
