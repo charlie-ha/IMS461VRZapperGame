@@ -11,8 +11,8 @@ public class scoreManager : MonoBehaviour
     public int redTargetBroken = 0;
     public int blueTargetBroken = 0;
     [SerializeField] private TMP_Text scoreText; // Drag your score UI TextMeshPro object here
-    [SerializeField] private TMP_Text redTargetText; // Drag your score UI TextMeshPro object here
-    [SerializeField] private TMP_Text blueTargetText; // Drag your score UI TextMeshPro object here
+    [SerializeField] private Text redTargetText; // Drag your score UI TextMeshPro object here
+    [SerializeField] private Text blueTargetText; // Drag your score UI TextMeshPro object here
 
     public void AddScore(string targetTag)
     {
@@ -35,7 +35,8 @@ public class scoreManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text =   score.ToString();
-            redTargetText.text = redTargetBroken.ToString();
+            redTargetText.text = "- Red Targets Broken - " + redTargetBroken.ToString();
+            blueTargetText.text = "- Blue Targets Broken - " + blueTargetBroken.ToString();
         }
     }
 }
