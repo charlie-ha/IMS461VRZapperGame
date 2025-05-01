@@ -10155,7 +10155,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0.5}
+  m_CenterOfMass: {x: 0, y: 0, z: 1}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
@@ -10642,9 +10642,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.031357307
-  m_Height: 0.10642856
+  m_Height: 0.15514722
   m_Direction: 1
-  m_Center: {x: 0.018936764, y: -0.09659603, z: -0.0036831833}
+  m_Center: {x: 0.018936764, y: -0.12095536, z: -0.0036831833}
 --- !u!65 &3128934302460078868
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10664,5 +10664,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.059999995, y: 0.114169925, z: 0.06}
-  m_Center: {x: -0.050000016, y: -0.08589332, z: 0.00000002333516}
+  m_Size: {x: 0.059999995, y: 0.16170712, z: 0.06}
+  m_Center: {x: -0.050000016, y: -0.10966192, z: 0.000000024214387}

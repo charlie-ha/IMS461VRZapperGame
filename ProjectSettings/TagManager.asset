@@ -8,6 +8,8 @@ TagManager:
   - target
   - blaster
   - Hands
+  - redTarget
+  - blueTarget
   layers:
   - Default
   - TransparentFX

@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class buttonPress : MonoBehaviour
 {
     [SerializeField] private TargetSpawner targetSpawner;
+    [SerializeField] private Text targetStatus;
     private bool buttonPressed = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void PressButton()
@@ -13,11 +16,13 @@ public class buttonPress : MonoBehaviour
         {
             targetSpawner.activateSpawner=true;//activate spawner
             buttonPressed = true;
+            targetStatus.text = "Target Spawning - True";
         }
         else if (buttonPressed == true)
         {
             targetSpawner.activateSpawner=false;//deactivate spawner
             buttonPressed = false;
+            targetStatus.text = "Target Spawning - False";
         }
 
     }
