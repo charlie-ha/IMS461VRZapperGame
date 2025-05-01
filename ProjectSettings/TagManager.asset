@@ -12,6 +12,7 @@ TagManager:
   - blueTarget
   - movingRedTarget
   - movingBlueTarget
+  - targetMoveLocations
   layers:
   - Default
   - TransparentFX
