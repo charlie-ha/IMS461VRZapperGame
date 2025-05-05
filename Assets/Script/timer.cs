@@ -7,6 +7,7 @@ public class timer : MonoBehaviour
     public bool timerIsOn;
     [SerializeField] TextMeshProUGUI timerText;
      public float remainingTime;
+    [SerializeField] string[] targetTags;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
@@ -27,25 +28,24 @@ public class timer : MonoBehaviour
                 timerIsOn=false;
                 //turn off spawn
                 targetSpawner.activateSpawner = false;
-                DestroyAllObjectsOnLayer(targetLayer);
+                DestroyObjectsWithTags(targetTags);
             }
         }
         
     }
-    private void DestroyAllObjectsOnLayer(int layer)
+    private void DestroyObjectsWithTags(string[] tags)
     {
-        GameObject[] allObjects = Object.FindObjectsByType<GameObject>(FindObjectsSortMode.None);
         int count = 0;
-
-        foreach (GameObject obj in allObjects)
+        foreach (string tag in tags)
         {
-            if (obj.layer == layer)
+            GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
+            foreach (GameObject obj in taggedObjects)
             {
                 Destroy(obj);
                 count++;
             }
         }
 
-        Debug.Log($"Destroyed {count} objects on layer {layer}");
+        Debug.Log($"Destroyed {count} objects with tags: {string.Join(", ", tags)}");
     }
 }
