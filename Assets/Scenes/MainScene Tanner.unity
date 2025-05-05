@@ -961,6 +961,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5403075537826948902, guid: d38fdd0eebdabbc46b4c886ef58423ee, type: 3}
+      propertyPath: remainingTime
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5403075537826948902, guid: d38fdd0eebdabbc46b4c886ef58423ee, type: 3}
       propertyPath: targetSpawner
       value: 
       objectReference: {fileID: 1157647770}
@@ -1726,6 +1730,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235684600}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &246343593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4883199643745236800, guid: 52a17aba49442423a8058c30115b2eba, type: 3}
+  m_PrefabInstance: {fileID: 284988949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &273023746
 GameObject:
   m_ObjectHideFlags: 0
@@ -11730,6 +11739,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6335303037313599347, guid: 859ef44a05731a34a860b956ea80a5fe, type: 3}
+      propertyPath: thePlayer
+      value: 
+      objectReference: {fileID: 246343593}
+    - target: {fileID: 6335303037313599347, guid: 859ef44a05731a34a860b956ea80a5fe, type: 3}
+      propertyPath: teleportTarget
+      value: 
+      objectReference: {fileID: 1799738712}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12697,6 +12714,11 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!4 &1799738712 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8098388929986046306, guid: 8351b48626496734fb3c6fafb2e565f8, type: 3}
+  m_PrefabInstance: {fileID: 2031405882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1826998840
 GameObject:
   m_ObjectHideFlags: 0
