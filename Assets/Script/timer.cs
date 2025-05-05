@@ -2,9 +2,11 @@ using UnityEngine;
 using TMPro;
 public class timer : MonoBehaviour
 {
+    [SerializeField] private int targetLayer = 6;
+    [SerializeField] private TargetSpawner targetSpawner;
     public bool timerIsOn;
     [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] float remainingTime;
+     public float remainingTime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
@@ -20,11 +22,30 @@ public class timer : MonoBehaviour
             int minuets = Mathf.FloorToInt(remainingTime / 60);
             int seconds = Mathf.FloorToInt(remainingTime % 60);
             timerText.text = string.Format("{0:00}:{1:00}", minuets, seconds);
-            if(seconds < 0 && minuets < 0)
+            if(seconds <= 0 && minuets <= 0)
             {
                 timerIsOn=false;
+                //turn off spawn
+                targetSpawner.activateSpawner = false;
+                DestroyAllObjectsOnLayer(targetLayer);
             }
         }
         
+    }
+    private void DestroyAllObjectsOnLayer(int layer)
+    {
+        GameObject[] allObjects = Object.FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+        int count = 0;
+
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.layer == layer)
+            {
+                Destroy(obj);
+                count++;
+            }
+        }
+
+        Debug.Log($"Destroyed {count} objects on layer {layer}");
     }
 }

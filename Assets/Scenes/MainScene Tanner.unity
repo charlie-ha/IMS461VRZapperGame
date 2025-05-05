@@ -960,6 +960,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5403075537826948902, guid: d38fdd0eebdabbc46b4c886ef58423ee, type: 3}
+      propertyPath: targetSpawner
+      value: 
+      objectReference: {fileID: 1157647770}
     - target: {fileID: 6351730957821243748, guid: d38fdd0eebdabbc46b4c886ef58423ee, type: 3}
       propertyPath: redTargetText
       value: 
@@ -4984,6 +4988,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &628835734 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6351730957821243748, guid: d38fdd0eebdabbc46b4c886ef58423ee, type: 3}
+  m_PrefabInstance: {fileID: 135245829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f603d27ead3c240b8ef3e76e334307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &631590049
 GameObject:
   m_ObjectHideFlags: 0
@@ -8806,6 +8821,7 @@ MonoBehaviour:
   targetSpawner: {fileID: 1194302517}
   targetStatus: {fileID: 149450700}
   timerobj: {fileID: 1505918286}
+  sManager: {fileID: 0}
 --- !u!114 &1366877293 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2043066480405472099, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
@@ -10384,6 +10400,7 @@ MonoBehaviour:
   targetSpawner: {fileID: 1157647770}
   targetStatus: {fileID: 228919804}
   timerobj: {fileID: 1546521481}
+  sManager: {fileID: 628835734}
 --- !u!114 &1601561921 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2043066480405472099, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
