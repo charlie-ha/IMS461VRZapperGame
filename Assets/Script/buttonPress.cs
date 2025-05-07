@@ -14,14 +14,15 @@ public class buttonPress : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void PressButton()
     {
-        if(buttonPressed == false)
+        sManager.ResetScore();
+        if (buttonPressed == false)
         {
             targetSpawner.activateSpawner=true;//activate spawner
             timerobj.timerIsOn = true;
             timerobj.remainingTime = 90;
             buttonPressed = true;
             targetStatus.text = "Target Spawning - True";
-            sManager.score = 0;
+            
         }
         else if (buttonPressed == true)
         {

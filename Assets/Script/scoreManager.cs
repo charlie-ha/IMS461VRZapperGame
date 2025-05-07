@@ -49,4 +49,12 @@ public class scoreManager : MonoBehaviour
             blueTargetText.text = "- Blue Targets Broken - " + blueTargetBroken.ToString();
         }
     }
+
+    public void ResetScore()
+    {
+        score = 0;
+        redTargetBroken = 0;
+        blueTargetBroken = 0;
+        UpdateScoreText();
+    }
 }
