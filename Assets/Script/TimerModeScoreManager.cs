@@ -11,7 +11,7 @@ public class TimerModeScoreManager : MonoBehaviour
     [SerializeField] private Text redTargetText;
     [SerializeField] private Text blueTargetText;
 
-    public void AddScore(string targetTag)
+    public void TM_AddScore(string targetTag)
     {
         if (targetTag == "TM_redTarget")
         {

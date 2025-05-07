@@ -9,6 +9,7 @@ public class targetBreak : MonoBehaviour
     [SerializeField] private GameObject broken_target;
     BoxCollider bc;
     private TargetSpawner targetSpawner;
+    public bool timerMode = false;
 
     private void Awake()
     {
@@ -27,11 +28,31 @@ public class targetBreak : MonoBehaviour
         {
             bc.enabled = false;
         }
-        scoreManager scoreManager = GameObject.FindFirstObjectByType<scoreManager>();
-        if (scoreManager != null)
+        if(timerMode == false)
         {
-            scoreManager.AddScore(this.tag);
+            scoreManager scoreManager = GameObject.FindFirstObjectByType<scoreManager>();
+            if (scoreManager != null)
+            {
+                scoreManager.AddScore(this.tag);
+            }
         }
+        else //(timerMode == true)
+        {
+            TimerModeScoreManager timerModeScoreManager = GameObject.FindFirstObjectByType<TimerModeScoreManager>();
+            if (timerModeScoreManager != null)
+            {
+                timerModeScoreManager.TM_AddScore(this.tag);
+            }
+        }
+
+        //if (scoreManager != null)
+        //{
+        //    scoreManager.AddScore(this.tag);
+        //}
+        //if (TimerModeScoreManager != null)
+        //{
+        //    TimerModeScoreManager.AddScore(this.tag);
+        //}
         //Debug.Log("broken");
     }
 }

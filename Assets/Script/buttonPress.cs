@@ -10,6 +10,7 @@ public class buttonPress : MonoBehaviour
     [SerializeField] private Text targetStatus;
     [SerializeField] private timer timerobj;
     public scoreManager sManager;
+    public TimerModeScoreManager TM_sManager;
     private bool buttonPressed = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void PressButton()
