@@ -902,7 +902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalRotation.y
@@ -910,7 +910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2158,9 +2158,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5032876436444636197, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3516867562030918485}
-    - targetCorrespondingSourceObject: {fileID: 5032876436444636197, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2883161098323739054}
   m_SourcePrefab: {fileID: 100100000, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
 --- !u!1 &5510955771594090644 stripped
 GameObject:
@@ -2282,20 +2279,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2883161098323739054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6187505457049014779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38b1db0e95ba2c442ab5fac735b8898d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minPitch: 0.8
-  maxPitch: 1.2
 --- !u!114 &6632815538911860958 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5479279364263488768, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}

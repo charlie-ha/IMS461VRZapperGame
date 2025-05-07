@@ -886,15 +886,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.043522
+      value: 5.5047927
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5668998
+      value: 0.56690097
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.831852
+      value: -101.01614
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2161,9 +2161,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5032876436444636197, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5822708395248033236}
-    - targetCorrespondingSourceObject: {fileID: 5032876436444636197, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7314302145160036195}
   m_SourcePrefab: {fileID: 100100000, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
 --- !u!1 &5094696189545031540 stripped
 GameObject:
@@ -2267,20 +2264,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7314302145160036195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5094696189545031540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38b1db0e95ba2c442ab5fac735b8898d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minPitch: 0.8
-  maxPitch: 1.2
 --- !u!114 &5720115544714440273 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5479279364263488768, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
