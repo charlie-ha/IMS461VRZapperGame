@@ -8,10 +8,18 @@ public class timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
      public float remainingTime;
     [SerializeField] string[] targetTags;
+
+    [SerializeField] private AudioClip endSound;
+    private AudioSource audioSource;
+
+    [SerializeField] private AudioClip countdownSound;
+    private bool countdownSoundPlayed = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
         timerIsOn = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,14 +31,33 @@ public class timer : MonoBehaviour
             int minuets = Mathf.FloorToInt(remainingTime / 60);
             int seconds = Mathf.FloorToInt(remainingTime % 60);
             timerText.text = string.Format("{0:00}:{1:00}", minuets, seconds);
-            if(seconds <= 0 && minuets <= 0)
+
+            if (remainingTime <= 30f)
+            {
+
+                audioSource.clip = countdownSound;
+                audioSource.loop = true;
+                audioSource.Play();
+                countdownSoundPlayed = true;
+            }
+            if (seconds <= 0 && minuets <= 0)
             {
                 timerIsOn=false;
                 //turn off spawn
                 targetSpawner.activateSpawner = false;
                 DestroyObjectsWithTags(targetTags);
+
+
+                if (audioSource.isPlaying)
+                {
+                    audioSource.Stop(); // Stop ticking
+                    audioSource.loop = false;
+                }
+                audioSource.PlayOneShot(endSound);
+
             }
         }
+
         
     }
     private void DestroyObjectsWithTags(string[] tags)
