@@ -63,7 +63,8 @@ public class timer : MonoBehaviour
                 targetSpawner.activateSpawner = false;
                 DestroyObjectsWithTags(targetTags);
                 countdownSoundPlayed = false;
-
+                targetSpawner.targetSpawnAmount = 5;
+                targetSpawner.spawnTimer = 10f;
                 if (audioSource.isPlaying)
                 {
                     audioSource.Stop(); // Stop ticking

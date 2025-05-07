@@ -21,6 +21,8 @@ public class TMbuttonPress : MonoBehaviour
             targetSpawner.activateSpawner=true;//activate spawner
             timerobj.timerIsOn = true;
             timerobj.remainingTime = 90;
+            targetSpawner.targetSpawnAmount = 5;
+            targetSpawner.spawnTimer = 10f;
             buttonPressed = true;
             targetStatus.text = "Target Spawning - True";
             
