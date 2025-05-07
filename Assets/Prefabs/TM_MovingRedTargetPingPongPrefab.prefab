@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intact_target: {fileID: 7547409532047709942}
   broken_target: {fileID: 198888322988568965}
+  timerMode: 0
 --- !u!65 &3486243106159153223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   pingPong: 1
-  targetLocations: []
+  timerMode: 1
 --- !u!1001 &2314576835393106982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5233974024986288848, guid: 2d1c086da59a942f48a06fd2e020065a, type: 3}
       propertyPath: m_TagString
-      value: redTarget
+      value: TM_movingRedTarget
       objectReference: {fileID: 0}
     - target: {fileID: 8761534250697189707, guid: 2d1c086da59a942f48a06fd2e020065a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -214,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intact_target: {fileID: 7547409532047709942}
   broken_target: {fileID: 198888322988568965}
+  timerMode: 1
 --- !u!114 &7121973067266479389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1393,7 +1395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852065516629851892, guid: 0cc4ac69958db466583a66d8d026c041, type: 3}
       propertyPath: m_TagString
-      value: redTarget
+      value: TM_movingRedTarget
       objectReference: {fileID: 0}
     - target: {fileID: 4956141977176375112, guid: 0cc4ac69958db466583a66d8d026c041, type: 3}
       propertyPath: m_Layer

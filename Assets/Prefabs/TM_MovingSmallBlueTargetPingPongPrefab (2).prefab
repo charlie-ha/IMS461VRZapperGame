@@ -886,15 +886,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.353398
+      value: 4.810887
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5669005
+      value: 0.5668993
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -99.008
+      value: -105.63262
       objectReference: {fileID: 0}
     - target: {fileID: 3785089792120706072, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1088,6 +1088,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: blueTarget
       objectReference: {fileID: 0}
+    - target: {fileID: 4759280629855898014, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
+      propertyPath: timerMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4789290343643343133, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1138,7 +1142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5032876436444636197, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_TagString
-      value: blueTarget
+      value: TM_movingBlueTarget
       objectReference: {fileID: 0}
     - target: {fileID: 5051701190071269644, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_Layer
@@ -1522,7 +1526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6664456676089060682, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_TagString
-      value: movingBlueTarget
+      value: TM_movingBlueTarget
       objectReference: {fileID: 0}
     - target: {fileID: 6690319659019410931, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}
       propertyPath: m_Layer
@@ -2294,7 +2298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   pingPong: 0
-  targetLocations: []
+  timerMode: 1
 --- !u!1 &1904494183766955201 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6664456676089060682, guid: 1425d87f1e240ea498c116a6fd5e72dd, type: 3}

@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288382709376671356}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 12.77, y: 1.168989, z: -1.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intact_target: {fileID: 5200783011837707664}
   broken_target: {fileID: 959808624151706007}
+  timerMode: 0
 --- !u!65 &8638371072199485921
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5233974024986288848, guid: 2d1c086da59a942f48a06fd2e020065a, type: 3}
       propertyPath: m_TagString
-      value: redTarget
+      value: TM_redTarget
       objectReference: {fileID: 0}
     - target: {fileID: 8761534250697189707, guid: 2d1c086da59a942f48a06fd2e020065a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -186,13 +187,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5200783011837707664}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d38dfca8c14f94c81853f4fe9714eb04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   intact_target: {fileID: 5200783011837707664}
   broken_target: {fileID: 959808624151706007}
+  timerMode: 1
 --- !u!114 &4346818080851425351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,7 +1379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852065516629851892, guid: 0cc4ac69958db466583a66d8d026c041, type: 3}
       propertyPath: m_TagString
-      value: redTarget
+      value: TM_redTarget
       objectReference: {fileID: 0}
     - target: {fileID: 4956141977176375112, guid: 0cc4ac69958db466583a66d8d026c041, type: 3}
       propertyPath: m_Layer

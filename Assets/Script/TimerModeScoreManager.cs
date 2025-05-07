@@ -32,7 +32,7 @@ public class TimerModeScoreManager : MonoBehaviour
         else if (targetTag == "TM_movingRedTarget")
         {
             TM_score += 7;
-            TM_blueTargetBroken += 1;
+            TM_redTargetBroken += 1;
         }
 
         UpdateScoreText();

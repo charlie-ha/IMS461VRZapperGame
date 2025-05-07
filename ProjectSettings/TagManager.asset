@@ -17,6 +17,7 @@ TagManager:
   - TM_blueTarget
   - TM_movingRedTarget
   - TM_movingBlueTarget
+  - TM_targetMoveLocation
   layers:
   - Default
   - TransparentFX

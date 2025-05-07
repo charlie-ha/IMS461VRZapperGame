@@ -17,7 +17,7 @@ public class buttonPress : MonoBehaviour
     public void PressButton()
     {
         TM_sManager.TM_ResetScore();
-        Debug.Log("Reset");
+        //Debug.Log("Reset");
         buttonPressed = !buttonPressed;
 
         if (buttonPressed == true)
@@ -31,16 +31,16 @@ public class buttonPress : MonoBehaviour
             
             buttonPressed = true;
             targetStatus.text = "Target Spawning - True";
-            Debug.Log("TargetSpawn True");
+            //Debug.Log("TargetSpawn True");
         }
         else if (buttonPressed == false)
         {
             targetSpawner.activateSpawner=false;//deactivate spawner
             buttonPressed = false;
             targetStatus.text = "Target Spawning - False";
-            Debug.Log("TargetSpawn False");
+            //Debug.Log("TargetSpawn False");
         }
-        Debug.Log("Button Pressed");
+        //Debug.Log("Button Pressed");
 
     }
 
