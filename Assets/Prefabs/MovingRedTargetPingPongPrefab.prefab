@@ -83,15 +83,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9fa6d54a4d16e04693220cdd0ce4ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   speed: 2
   pingPong: 1
+  targetLocations: []
 --- !u!1001 &1143956927968234539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2384,6 +2378,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4852065516629851892, guid: 0cc4ac69958db466583a66d8d026c041, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2272308145814030093}
+    - targetCorrespondingSourceObject: {fileID: 4852065516629851892, guid: 0cc4ac69958db466583a66d8d026c041, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8315353632795500324}
     - targetCorrespondingSourceObject: {fileID: 6697940793896655774, guid: 0cc4ac69958db466583a66d8d026c041, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4958626110877992855}
@@ -4293,6 +4290,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8315353632795500324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532402979858426607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b1db0e95ba2c442ab5fac735b8898d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minPitch: 0.8
+  maxPitch: 1.2
 --- !u!1 &1593797533075040574 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4616050993963351333, guid: 0cc4ac69958db466583a66d8d026c041, type: 3}
