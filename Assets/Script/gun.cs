@@ -99,7 +99,7 @@ public class gun : MonoBehaviour
                 //Debug.Log("We've shot" + hitInfo.point);
                 //laserLine.SetPosition(1, hitInfo.point);
                 GameObject hitObject = hitInfo.collider.gameObject;
-                Debug.Log(hitObject.name);
+                //bug.Log(hitObject.name);
                 // if (hitObject.name == "intact_target" || hitObject.layer == LayerMask.NameToLayer("target"))
                 // {
                 //     // Spawn broken target at the same position and rotation
