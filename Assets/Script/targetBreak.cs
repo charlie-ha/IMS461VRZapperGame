@@ -23,7 +23,7 @@ public class targetBreak : MonoBehaviour
     {
         intact_target.SetActive(false);
         broken_target.SetActive(true);
-        targetSpawner.targetsInGameAmount--;
+        //targetSpawner.targetsInGameAmount--;
         if(bc != null)
         {
             bc.enabled = false;

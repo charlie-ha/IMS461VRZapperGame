@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class TimerModeScoreManager : MonoBehaviour
@@ -45,5 +46,12 @@ public class TimerModeScoreManager : MonoBehaviour
             redTargetText.text = "- Red Targets Broken - " + TM_redTargetBroken.ToString();
             blueTargetText.text = "- Blue Targets Broken - " + TM_blueTargetBroken.ToString();
         }
+    }
+    public void TM_ResetScore()
+    {
+        TM_score = 0;
+        TM_redTargetBroken = 0;
+        TM_blueTargetBroken = 0;
+        UpdateScoreText();
     }
 }
