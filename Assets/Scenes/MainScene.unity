@@ -11793,6 +11793,7 @@ MonoBehaviour:
   timerobj: {fileID: 0}
   sManager: {fileID: 0}
   TM_sManager: {fileID: 0}
+  buttonTimerMode: 0
 --- !u!1 &562015289
 GameObject:
   m_ObjectHideFlags: 0
@@ -19211,7 +19212,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963507086}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b14a895a2c0848cc80cdf1da567afb0, type: 3}
   m_Name: 
@@ -19221,6 +19222,7 @@ MonoBehaviour:
   timerobj: {fileID: 6988955592320473049}
   sManager: {fileID: 0}
   TM_sManager: {fileID: 7585887514690333272}
+  buttonTimerMode: 1
 --- !u!114 &963507092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19228,7 +19230,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963507086}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d59cceeb9d33b6a48b93207305b86b16, type: 3}
   m_Name: 
@@ -22464,7 +22466,6 @@ MonoBehaviour:
   - {fileID: 5255700898042999760, guid: f428c57dd40026948821c5efda4fc68f, type: 3}
   - {fileID: 5837814471888966122, guid: 641c857d6872ba6469bba561d3a2160e, type: 3}
   spawnTimer: 10
-  targetsInGameAmount: 0
 --- !u!4 &1120936381
 Transform:
   m_ObjectHideFlags: 0
@@ -30361,7 +30362,6 @@ MonoBehaviour:
   - {fileID: 6454362734635373590, guid: 313ff734176f8cb4eb3a166a6bec354e, type: 3}
   - {fileID: 1288382709376671356, guid: 27a4c680dd8091d4aab7f73d0ddf8463, type: 3}
   spawnTimer: 10
-  targetsInGameAmount: 0
 --- !u!1 &1529864720
 GameObject:
   m_ObjectHideFlags: 0

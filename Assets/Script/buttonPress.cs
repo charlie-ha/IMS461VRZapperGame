@@ -8,29 +8,37 @@ public class buttonPress : MonoBehaviour
 {
     [SerializeField] private TargetSpawner targetSpawner;
     [SerializeField] private Text targetStatus;
-    //[SerializeField] private timer timerobj;
+    [SerializeField] private timer timerobj;
     public scoreManager sManager;
-    //public TimerModeScoreManager TM_sManager;
+    public TimerModeScoreManager TM_sManager;
     private bool buttonPressed = false;
+    public bool buttonTimerMode = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void PressButton()
     {
         sManager.ResetScore();
+        Debug.Log("Reset");
         if (buttonPressed == false)
         {
             targetSpawner.activateSpawner=true;//activate spawner
-            //timerobj.timerIsOn = true;
-            //timerobj.remainingTime = 90;
+            if (buttonTimerMode == true)
+            {
+                timerobj.timerIsOn = true;
+                timerobj.remainingTime = 90;
+            }
+            
             buttonPressed = true;
             targetStatus.text = "Target Spawning - True";
-            
+            Debug.Log("TargetSpawn True");
         }
         else if (buttonPressed == true)
         {
             targetSpawner.activateSpawner=false;//deactivate spawner
             buttonPressed = false;
             targetStatus.text = "Target Spawning - False";
+            Debug.Log("TargetSpawn False");
         }
+        Debug.Log("Button Pressed");
 
     }
 
