@@ -32,13 +32,14 @@ public class timer : MonoBehaviour
             int seconds = Mathf.FloorToInt(remainingTime % 60);
             timerText.text = string.Format("{0:00}:{1:00}", minuets, seconds);
 
-            if (remainingTime <= 30f)
+            if (remainingTime <= 30f && !countdownSoundPlayed)//calls once instead of every frame
             {
 
                 audioSource.clip = countdownSound;
                 audioSource.loop = true;
                 audioSource.Play();
                 countdownSoundPlayed = true;
+                Debug.Log("Countdown Sound Played");
             }
             if (seconds <= 0 && minuets <= 0)
             {
@@ -46,7 +47,7 @@ public class timer : MonoBehaviour
                 //turn off spawn
                 targetSpawner.activateSpawner = false;
                 DestroyObjectsWithTags(targetTags);
-
+                countdownSoundPlayed = false;
 
                 if (audioSource.isPlaying)
                 {
