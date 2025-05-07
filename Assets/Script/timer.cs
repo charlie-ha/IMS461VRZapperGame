@@ -31,6 +31,21 @@ public class timer : MonoBehaviour
             int minuets = Mathf.FloorToInt(remainingTime / 60);
             int seconds = Mathf.FloorToInt(remainingTime % 60);
             timerText.text = string.Format("{0:00}:{1:00}", minuets, seconds);
+            if (remainingTime <= 60 && remainingTime > 40)//increase spawn rate and number
+            {
+                targetSpawner.targetSpawnAmount = 8;
+                targetSpawner.spawnTimer = 8f;
+            }
+            else if (remainingTime <= 40 && remainingTime > 20)
+            {
+                targetSpawner.targetSpawnAmount = 12;
+                targetSpawner.spawnTimer = 6f;
+            }
+            else if (remainingTime <= 20)
+            {
+                targetSpawner.targetSpawnAmount = 15;
+                targetSpawner.spawnTimer = 4f;
+            }
 
             if (remainingTime <= 30f && !countdownSoundPlayed)//calls once instead of every frame
             {
