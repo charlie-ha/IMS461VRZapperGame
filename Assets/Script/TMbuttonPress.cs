@@ -13,7 +13,7 @@ public class TMbuttonPress : MonoBehaviour
     public TimerModeScoreManager TM_sManager;
     private bool buttonPressed = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void PressButton()
+    public void TMPressButton()
     {
         TM_sManager.TM_ResetScore();
         if (buttonPressed == false)

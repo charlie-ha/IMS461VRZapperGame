@@ -12,26 +12,28 @@ public class buttonPress : MonoBehaviour
     public scoreManager sManager;
     public TimerModeScoreManager TM_sManager;
     private bool buttonPressed = false;
-    public bool buttonTimerMode = false;
+    //public bool buttonTimerMode = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void PressButton()
     {
-        sManager.ResetScore();
+        TM_sManager.TM_ResetScore();
         Debug.Log("Reset");
-        if (buttonPressed == false)
+        buttonPressed = !buttonPressed;
+
+        if (buttonPressed == true)
         {
             targetSpawner.activateSpawner=true;//activate spawner
-            if (buttonTimerMode == true)
-            {
+            //if (buttonTimerMode == true)
+            //{
                 timerobj.timerIsOn = true;
                 timerobj.remainingTime = 90;
-            }
+            //}
             
             buttonPressed = true;
             targetStatus.text = "Target Spawning - True";
             Debug.Log("TargetSpawn True");
         }
-        else if (buttonPressed == true)
+        else if (buttonPressed == false)
         {
             targetSpawner.activateSpawner=false;//deactivate spawner
             buttonPressed = false;
