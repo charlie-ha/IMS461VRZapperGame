@@ -915,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3787407577431135657, guid: d38fdd0eebdabbc46b4c886ef58423ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 4317014774248541378, guid: d38fdd0eebdabbc46b4c886ef58423ee, type: 3}
       propertyPath: m_Size
@@ -9573,6 +9573,7 @@ MonoBehaviour:
   targetStatus: {fileID: 149450700}
   timerobj: {fileID: 1505918286}
   sManager: {fileID: 855824288}
+  TM_sManager: {fileID: 0}
 --- !u!114 &1366877293 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2043066480405472099, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
@@ -11249,6 +11250,7 @@ MonoBehaviour:
   targetStatus: {fileID: 228919804}
   timerobj: {fileID: 1546521481}
   sManager: {fileID: 628835734}
+  TM_sManager: {fileID: 0}
 --- !u!114 &1601561921 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2043066480405472099, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
